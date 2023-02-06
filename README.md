@@ -23,12 +23,12 @@ for (index, _ ) in self.sampleAnalytics.enumerated() {
 ### Graph Animation 
 
 ```swift
-        for (index, _ ) in self.sampleAnalytics.enumerated() {
+          for (index, _ ) in self.sampleAnalytics.enumerated() {
                 
                 // For Some Reason Delay is Not Working
                 // Using Dispatch Queue Delay
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.05) {
-                    withAnimation(.easeInOut(duration: 0.8))) { // .delay(Double(index) * 1
+                    withAnimation(.easeInOut(duration: 0.8)) {
                         self.sampleAnalytics[index].animate = true
                     }
                 }
