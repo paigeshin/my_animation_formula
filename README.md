@@ -34,3 +34,16 @@ for (index, _ ) in self.sampleAnalytics.enumerated() {
                 }
             }
 ```
+
+```swift
+     for (index, _ ) in self.sampleAnalytics.enumerated() {
+                
+                // For Some Reason Delay is Not Working
+                // Using Dispatch Queue Delay
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.05) {
+                    withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8)) {
+                        self.sampleAnalytics[index].animate = true
+                    }
+                }
+            }
+```
