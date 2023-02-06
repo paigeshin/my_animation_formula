@@ -9,3 +9,13 @@
           self.animateMeasureScale.toggle()
     }
 ```
+
+### Bouncing Wave 
+
+```swift
+for (index, _ ) in self.sampleAnalytics.enumerated() {
+    withAnimation(.interactiveSpring(response: 0.8, dampingFraction: 0.8, blendDuration: 0.8).delay(Double(index) * 0.05)) {
+        self.sampleAnalytics[index].animate = true
+    }
+}
+```
