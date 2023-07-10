@@ -47,3 +47,9 @@ for (index, _ ) in self.sampleAnalytics.enumerated() {
                 }
             }
 ```
+
+### Spring
+
+```swift
+      .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 20, initialVelocity: 0), value: self.show)
+```
